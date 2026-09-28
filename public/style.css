@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000;
+  color: #333;
+}
+#painel {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+  overflow-y: auto;
+}
+.painel-topo h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+.painel-topo h1 span {
+  font-weight: 400;
+}
+.painel-topo small {
+  color: #6b6b6b;
+  font-size: 13px;
+  text-transform: lowercase;
+}
+#campos {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.campo {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 4px 12px;
+  gap: 10px;
+  border: 1px solid transparent;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+.campo:focus-within {
+  background: #fff;
+  border-color: #000;
+}
+.bolinha {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+.bolinha.origem {
+  background-color: #000;
+  border-radius: 50%;
+}
+.bolinha.destino {
+  background-color: #000;
+  border-radius: 0;
+}
+.campo input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 15px;
+  outline: none;
+  color: #000;
+}
+.campo button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.campo button:hover {
+  opacity: 1;
+}
+.sugestoes {
+  list-style: none;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: none;
+}
+.sugestoes li {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+.sugestoes li:hover {
+  background: #f9f9f9;
+}
+.dica {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.oculto {
+  display: none !important;
+}
+#resumo,
+#status {
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.resumo-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #555;
+}
+.resumo-linha strong {
+  color: #000;
+  font-weight: 600;
+}
+.resumo-linha.preco {
+  font-size: 18px;
+  color: #000;
+  margin-top: 8px;
+}
+.resumo-linha.preco strong {
+  font-size: 22px;
+  font-weight: 700;
+}
+.btn-principal {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.btn-principal:hover {
+  background: #222;
+}
+#barra-progresso {
+  width: 100%;
+  height: 6px;
+  background: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+#barra-preenchida {
+  width: 0%;
+  height: 100%;
+  background: #000;
+}
+#card-motorista {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #eee;
+}
+@media (max-width: 600px) {
+  #painel {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    position: absolute;
+    bottom: 0;
+    border-radius: 16px 16px 0 0;
+  }
+}

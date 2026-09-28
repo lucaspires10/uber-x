@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Meu Uber</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="mapa"></div>
+    <aside id="painel">
+      <header class="painel-topo">
+        <h1>Meu<span>Uber</span></h1>
+        <small>simulador de corridas</small>
+      </header>
+      <fieldset id="campos">
+        <form class="campo" id="form-origem" action="#">
+          <span class="bolinha origem"></span>
+          <input
+            id="input-origem"
+            type="search"
+            enterkeyhint="search"
+            placeholder="De onde você sai?"
+          />
+          <button type="submit" title="Buscar">🔍</button>
+        </form>
+        <ul id="sugestoes-origem" class="sugestoes"></ul>
+        <form class="campo" id="form-destino" action="#">
+          <span class="bolinha destino"></span>
+          <input
+            id="input-destino"
+            type="search"
+            enterkeyhint="search"
+            placeholder="Para onde vamos?"
+          />
+          <button type="submit" title="Buscar">🔍</button>
+        </form>
+        <ul id="sugestoes-destino" class="sugestoes"></ul>
+      </fieldset>
+      <section id="resumo" class="oculto">
+        <div class="resumo-linha">
+          <span>Distância</span> <strong id="resumo-distancia">-</strong>
+        </div>
+        <div class="resumo-linha">
+          <span>Tempo estimado</span> <strong id="resumo-tempo">-</strong>
+        </div>
+        <div class="resumo-linha preco">
+          <span>MeuUber X</span> <strong id="resumo-preco">-</strong>
+        </div>
+        <button id="btn-solicitar" class="btn-principal">
+          Solicitar corrida
+        </button>
+      </section>
+      <section id="status" class="oculto">
+        <p id="status-texto"></p>
+        <div id="card-motorista" class="oculto"></div>
+        <div id="barra-progresso"><div id="barra-preenchida"></div></div>
+        <button id="btn-nova" class="btn-principal oculto">Nova corrida</button>
+      </section>
+    </aside>
+  </body>
+</html>
